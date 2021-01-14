@@ -15,5 +15,5 @@ cp -r "dist"/* "gh-pages"
 
 cd "gh-pages"
 git add .
-# git commit -m "gh-pages"
-# git push -u origin gh-pages
+git commit -m "gh-pages"
+git push -u origin gh-pages
