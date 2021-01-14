@@ -104,6 +104,11 @@ h2 {
       background-image: url("./assets/secret-hitler.svg");
     }
 
+    &.dominion {
+      background-size: 64px;
+      background-image: url("./assets/dominion.png");
+    }
+
     &.umich-scheduler {
       background-size: 4em;
       background-image: url("./assets/umich-scheduler.svg");
@@ -112,6 +117,15 @@ h2 {
     &.diplomacy {
       background-size: 72px;
       background-image: url("./assets/diplomacy.png");
+      image-rendering: pixelated;
+    }
+
+    &.chess {
+      background-image: url("./assets/chess.png");
+    }
+
+    &.leaf {
+      background-image: url("./assets/leaf.png");
       image-rendering: pixelated;
     }
 
