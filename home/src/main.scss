@@ -125,6 +125,7 @@ h2 {
     }
 
     &.leaf {
+      background-size: 64px;
       background-image: url("./assets/leaf.png");
       image-rendering: pixelated;
     }
