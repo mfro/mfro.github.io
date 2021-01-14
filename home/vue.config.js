@@ -8,7 +8,6 @@ module.exports = {
       filename: 'index.html',
       template: 'src/main.html',
       favicon: 'src/assets/favicon.ico',
-      inject: false,
     },
   },
 
@@ -16,13 +15,18 @@ module.exports = {
     disableHostCheck: true,
   },
 
-  configureWebpack: {
-    plugins: [
-      new HTMLInlineCSSWebpackPlugin(),
-    ],
-  },
-
   chainWebpack: (config) => {
+    if (process.env['NODE_ENV'] == 'production') {
+      config.plugin('html-index')
+        .tap(args => {
+          args[0].inject = false;
+          return args;
+        });
+
+      config.plugin('inline-css')
+        .use(HTMLInlineCSSWebpackPlugin);
+    }
+
     config.plugins.delete('preload-index');
   },
 };
