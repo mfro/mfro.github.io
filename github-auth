@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+echo -n "GitHub user name? "
+read GITHUB_USER
+echo -n "SSH / Unix account? [$GITHUB_USER] "
+read UNIX_USER
+UNIX_USER=${UNIX_USER:-$GITHUB_USER}
+
+# Add sshd configuration
+sudo tee -a /etc/ssh/sshd_config > /dev/null << X
+Match User $UNIX_USER
+    AuthorizedKeysFile  %h/.ssh/authorized_keys /etc/github-auth
+Match User github
+    AuthorizedKeysCommand /usr/local/bin/github-fetch
+    AuthorizedKeysCommandUser root
+X
+
+# Add dummy 'github' user
+sudo adduser --system \
+    --disabled-login \
+    --disabled-password \
+    --no-create-home \
+    --home /nonexistent \
+    github
+
+# Add github-fetch command
+sudo tee /usr/local/bin/github-fetch > /dev/null << X
+#!/usr/bin/env bash
+export \$(cat /etc/environment | xargs)
+curl -s https://github.com/$GITHUB_USER.keys > /etc/github-auth
+X
+
+sudo chmod +x /usr/local/bin/github-fetch
+
+# Add authorized keys file
+sudo touch /etc/github-auth
+sudo systemctl restart ssh
