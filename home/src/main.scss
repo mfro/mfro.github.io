@@ -13,6 +13,8 @@ body {
 main {
   width: 100vw;
   max-width: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -50,7 +52,7 @@ h2 {
 }
 
 .app {
-  margin: 1em;
+  margin: 1em 1em 0 1em;
   height: 5em;
 
   border: 2px solid rgba($hover-color, 1);
@@ -139,5 +141,27 @@ h2 {
       background-size: 72px;
       background-image: url("./assets/tetris.png");
     }
+  }
+}
+
+.grow {
+  flex: 1 1 0;
+}
+
+.footer {
+  flex: 0 0 auto;
+  align-self: center;
+
+  > .froehlich {
+    $width: 6em;
+
+    margin: 1em;
+    width: $width;
+    height: ($width * 0.35);
+
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./assets/froehlich.svg");
   }
 }
