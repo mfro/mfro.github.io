@@ -99,14 +99,23 @@ h2 {
     background-repeat: no-repeat;
     background-position: center;
 
+    &.dominion {
+      background-size: 64px;
+      background-image: url("./assets/dominion.png");
+    }
+
     &.secret-hitler {
       filter: drop-shadow(0 0 5px gray);
       background-image: url("./assets/secret-hitler.svg");
     }
 
-    &.dominion {
-      background-size: 64px;
-      background-image: url("./assets/dominion.png");
+    &.avalon {
+      width: 4em;
+      height: 4em;
+      margin-left: 0.5em;
+      margin-right: 1.5em;
+      border-radius: 0.8em;
+      background-image: url("./assets/avalon.png");
     }
 
     &.umich-scheduler {
@@ -120,14 +129,14 @@ h2 {
       image-rendering: pixelated;
     }
 
-    &.chess {
-      background-image: url("./assets/chess.png");
-    }
-
     &.leaf {
       background-size: 64px;
       background-image: url("./assets/leaf.png");
       image-rendering: pixelated;
+    }
+
+    &.chess {
+      background-image: url("./assets/chess.png");
     }
 
     &.snake {
