@@ -118,6 +118,11 @@ h2 {
       background-image: url("./assets/avalon.png");
     }
 
+    &.dice {
+      background-size: 4em;
+      background-image: url("./assets/d20.png");
+    }
+
     &.umich-scheduler {
       background-size: 4em;
       background-image: url("./assets/umich-scheduler.svg");
