@@ -104,6 +104,11 @@ h2 {
       background-image: url("./assets/dominion.png");
     }
 
+    &.carcassonne {
+      background-size: 64px;
+      background-image: url("./assets/carcassonne.png");
+    }
+
     &.secret-hitler {
       filter: drop-shadow(0 0 5px gray);
       background-image: url("./assets/secret-hitler.svg");
