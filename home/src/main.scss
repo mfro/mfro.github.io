@@ -109,8 +109,18 @@ h2 {
       background-image: url("./assets/carcassonne.png");
     }
 
+    &.mogu {
+      filter: drop-shadow(0 0 3px gray);
+      background-image: url("./assets/mogu.png");
+      image-rendering: pixelated;
+      width: 64px;
+      height: 64px;
+      margin-left: calc((5em - 64px) / 2);
+      margin-right: calc((5em - 64px) / 2 + 1em);
+    }
+
     &.secret-hitler {
-      filter: drop-shadow(0 0 5px gray);
+      filter: drop-shadow(0 0 3px gray);
       background-image: url("./assets/secret-hitler.svg");
     }
 
