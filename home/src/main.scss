@@ -109,6 +109,11 @@ h2 {
       background-image: url("./assets/carcassonne.png");
     }
 
+    &.project-l {
+      background-size: 64px;
+      background-image: url("./assets/project-l.svg");
+    }
+
     &.mogu {
       filter: drop-shadow(0 0 3px lightgray);
       background-image: url("./assets/mogu.png");
@@ -136,11 +141,6 @@ h2 {
     &.dice {
       background-size: 4em;
       background-image: url("./assets/d20.png");
-    }
-
-    &.umich-scheduler {
-      background-size: 4em;
-      background-image: url("./assets/umich-scheduler.svg");
     }
 
     &.diplomacy {
