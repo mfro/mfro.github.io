@@ -1,4 +1,3 @@
-
 $hover-color: #eee;
 
 body {
@@ -122,6 +121,15 @@ h2 {
       height: 64px;
       margin-left: calc((5em - 64px) / 2);
       margin-right: calc((5em - 64px) / 2 + 1em);
+    }
+
+    &.crew {
+      filter: drop-shadow(0 0 3px gray);
+      background-image: url("./assets/astronaut.png");
+      background-position: 50% 0.3em;
+      height: 4.5em;
+      width: 5em;
+      background-size: auto 120%;
     }
 
     &.secret-hitler {
