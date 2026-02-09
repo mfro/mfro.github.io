@@ -1,19 +1,16 @@
 {
-  "name": "home",
-  "version": "0.1.0",
-  "private": true,
+  "name": "home-v2",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && rm -r dist/js"
+    "dev": "astro dev",
+    "build": "astro build"
   },
   "dependencies": {
-    "ress": "^3.0.0"
+    "astro": "^5.17.1",
+    "ress": "^5.0.2"
   },
   "devDependencies": {
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "html-inline-css-webpack-plugin": "^1.10.0",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass-embedded": "^1.97.3"
   }
 }

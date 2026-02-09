@@ -14,11 +14,11 @@ if [ ! -d "gh-pages" ]; then
   fi
 fi
 
-yarn build
+npm run build
 
 cd "gh-pages"
 git pull
-cp -r "../dist"/* .
+cp -a "../dist/." .
 git add .
 git commit -m "gh-pages"
 git push
