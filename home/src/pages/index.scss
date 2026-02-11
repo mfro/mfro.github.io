@@ -1,5 +1,17 @@
 $hover-color: #eee;
 
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("../assets/Roboto-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  src: url("../assets/Roboto-Medium.woff2");
+}
+
 body {
   margin: 0;
   font-family: "Roboto", "Arial", sans-serif;
